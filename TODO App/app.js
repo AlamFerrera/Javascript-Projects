@@ -34,6 +34,12 @@ function addTodo(todo){
             updateLS();
         });
 
+        todoEl.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            todoEl.remove();
+            updateLS();
+        });
+
         todosUL.appendChild(todoEl);
         input.value = "";
         updateLS();
@@ -41,7 +47,7 @@ function addTodo(todo){
 }
 
 function updateLS(){
-    const todosEl = document.querySelectorAll('li');
+    const todosEl = document.querySelectorAll("li");
     const todos = [];
 
     todosEl.forEach((todoEl) => {
