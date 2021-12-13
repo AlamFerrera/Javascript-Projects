@@ -75,9 +75,10 @@ input{
     background-color: rgb(14, 80, 43);
 }
 
+/*
 .buttonIniciar:focus{
     background-color: rgb(1, 44, 20);
-}
+}*/
 
 
 .buttonReset{
@@ -89,6 +90,7 @@ input{
     background-color: rgb(136, 18, 18);
 }
 
+/*
 .buttonReset:focus{
     background-color: rgb(66, 2, 2);
-}
+}*/
