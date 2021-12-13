@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    background-color: royalblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row{
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.labels{
+    font-size: 4.5rem;
+}
+
+input{
+    font-size: 4rem;
+    background-color: inherit;
+    text-align: center;
+    width: 100px;
+    border:none;
+}
+
+.timer{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 4.5rem;
+}
+
+.minSeg{
+    width: 75px;
+    padding: 0;
+    margin: 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 3px 0;
+    width: 100%;
+}
+.buttonIniciar, .buttonReset{
+    width: 120px;
+    margin: 1.5rem;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonIniciar{
+    background-color: seagreen;
+    color: #FFF;
+}
+
+.buttonIniciar:hover{
+    background-color: rgb(14, 80, 43);
+}
+
+.buttonIniciar:focus{
+    background-color: rgb(1, 44, 20);
+}
+
+
+.buttonReset{
+    background-color: rgb(161, 43, 43);
+    color: #FFF;
+}
+
+.buttonReset:hover{
+    background-color: rgb(136, 18, 18);
+}
+
+.buttonReset:focus{
+    background-color: rgb(66, 2, 2);
+}
