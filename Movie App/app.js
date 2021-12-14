@@ -28,7 +28,7 @@ function showMovies(respData) {
     main.innerHTML = "";
     search.value = "";
 
-    respData.results.forEach((movie) => { console.log(movie);
+    respData.results.forEach((movie) => { //console.log(movie);
         const movieEl = document.createElement("div");
         movieEl.classList.add("movie");
         movieEl.innerHTML = `
