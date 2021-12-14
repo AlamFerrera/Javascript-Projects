@@ -87,6 +87,7 @@ header{
     padding: 0.5rem 1rem;
     font-family: inherit;
     font-size: 1rem;
+    color: #FFF;
 }
 
 .search::placeholder{
@@ -96,5 +97,4 @@ header{
 .search:focus{
     background-color: #22254B;
     outline: none;
-    color: #FFF;
 }
