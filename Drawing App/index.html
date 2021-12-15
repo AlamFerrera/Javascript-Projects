@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,32 @@
     <title>Drawing App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-   <canvas id="canvas" width="500" height="500"></canvas>
-    
+    <div class="container">
+        <canvas id="canvas" width="500" height="500"></canvas>
+
+        <div class="toolbox">
+            <div class="tooltip">
+                <button id="increase" class="increase">+</button>
+                <span class="increase tooltiptext">Incrementar</span>
+            </div>
+            <span id="size" class="size"></span>
+            <div class="tooltip">
+                <button id="decrease" class="decrease">-</button>
+                <span class="decrease tooltiptext">Disminuir</span>
+            </div>
+            <input type="color" id="color" class="color">
+            <div class="tooltip">
+                <button id="clear" class="clear">💩</button>
+                <span class="tooltiptext">Limpiar</span>
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="app.js" defer></script>
 </body>
+
 </html>
