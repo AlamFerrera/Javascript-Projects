@@ -27,6 +27,7 @@ body{
     background-color: rebeccapurple;
     width: 500px;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     padding: 10px;
 }
