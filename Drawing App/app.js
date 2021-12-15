@@ -15,10 +15,10 @@ let isPressed = false;
 let color = "";
 
 clearEl.addEventListener("click", () => {
-    console.log("clickeado");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-colorEl.addEventListener("change", (e) => {
+colorEl.addEventListener("change", () => {
     color = colorEl.value;
 });
 
@@ -48,7 +48,7 @@ canvas.addEventListener("mousedown", (e) => {
     drawCircle(x,y);
 });
 
-canvas.addEventListener("mouseup", (e) => {
+canvas.addEventListener("mouseup", () => {
     isPressed = false;
     x = undefined;
     y = undefined;
@@ -56,13 +56,12 @@ canvas.addEventListener("mouseup", (e) => {
 
 canvas.addEventListener("mousemove", (e) => {
     if(isPressed){
-       const x2 = e.offsetX;
-       const y2 = e.offsetY;
-       drawCircle(x2,y2);
-       drawLine(x,y,x2,y2);
-
-       x = x2;
-       y = y2;
+        const x2 = e.offsetX;
+        const y2 = e.offsetY;
+        drawCircle(x2,y2);
+        drawLine(x,y,x2,y2);
+        x = x2;
+        y = y2;
     }
 });
 
