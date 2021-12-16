@@ -11,17 +11,23 @@
     <div class="container">
         <div class="row">
             <div class="labels">
-                <input type="text" maxlength="2" id="valueIzq" value="00">
+                <div class="arrow-up" id="upValueIzq"></div>
+                <button id="valueIzq" class="valueIzq" readonly>00</button>
+                <div class="arrow-down" id="downValueIzq"></div>
             </div>
     
             <div class="timer">
-                <input type="text" maxlength="2" class="minSeg" value="00" id="min">
+                <input type="text" maxlength="2" class="minSeg" value="00" id="min"
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 : 
-                <input type="text" maxlength="2" class="minSeg" value="00" id="seg">
+                <input type="text" maxlength="2" class="minSeg" value="00" id="seg"
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
             </div>
     
             <div class="labels">
-                <input type="text" maxlength="2" value="00" id="valueDer">
+                <div class="arrow-up" id="upValueDer"></div>
+                <button id="valueDer" class="valueDer" >00</button>
+                <div class="arrow-down" id="downValueDer"></div>
             </div>
         </div>
         <div class="buttons">

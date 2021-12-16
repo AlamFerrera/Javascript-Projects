@@ -1,11 +1,17 @@
-let valueIzq = document.getElementById('valueIzq');
-let valueDer = document.getElementById('valueDer');
-let min = document.getElementById('min');
-let seg = document.getElementById('seg');
+const valueIzq = document.getElementById('valueIzq');
+const valueDer = document.getElementById('valueDer');
 const btnIniciar = document.getElementById('btnIniciar');
 const btnReiniciar = document.getElementById('btnReiniciar');
+const upValueIzq = document.getElementById('upValueIzq');
+const downValueIzq = document.getElementById('downValueIzq');
+const upValueDer = document.getElementById('upValueDer');
+const downValueDer = document.getElementById('downValueDer');
 
+let min = document.getElementById('min');
+let seg = document.getElementById('seg');
 let id;
+let newValueIzq = 0;
+let newValueDer = 0;
 
 btnIniciar.addEventListener('click', () => {
     if (btnIniciar.classList.contains("iniciar")) {
@@ -15,12 +21,62 @@ btnIniciar.addEventListener('click', () => {
     }
 });
 
+upValueIzq.addEventListener("click", () => {
+    newValueIzq++;
+    
+    if(newValueIzq < 10){
+        valueIzq.innerText = "0"+newValueIzq;
+    }
+    else{
+        valueIzq.innerText = newValueIzq;
+    }
+});
+
+downValueIzq.addEventListener("click", () => {
+    newValueIzq > 0 ? newValueIzq-- : "";
+    
+    if(newValueIzq < 10){
+        valueIzq.innerText = "0"+newValueIzq;
+    }
+    else{
+        valueIzq.innerText = newValueIzq;
+    }
+});
+
+upValueDer.addEventListener("click", () => {
+    newValueDer++;
+    
+    if(newValueDer < 10){
+        valueDer.innerText = "0"+newValueDer;
+    }
+    else{
+        valueDer.innerText = newValueDer;
+    }
+});
+
+downValueDer.addEventListener("click", () => {
+    newValueDer > 0 ? newValueDer-- : "";
+    
+    if(newValueDer < 10){
+        valueDer.innerText = "0"+newValueDer;
+    }
+    else{
+        valueDer.innerText = newValueDer;
+    }
+});
+
 btnReiniciar.addEventListener('click', () => {
-    valueIzq.value = "00";
-    valueDer.value = "00";
+    Reiniciar();
+});
+
+function Reiniciar(){
+    valueIzq.innerText = "00";
+    valueDer.innerText = "00";
     min.value = "00";
     seg.value = "00";
-});
+    btnIniciar.value = "Iniciar";
+    clearInterval(id);
+}
 
 function Pausa() {
     if ((min.value < 10 && min.value <= 0) && (seg.value < 10 && seg.value <= 0)) {
@@ -50,26 +106,27 @@ function iniciarConteo() {
             if (seg.value > 0) {
                 seg.value--;
             }
-            if (seg.value < 10 && seg.value > 0) {
+            if (seg.value > 0 && seg.value < 10) {
                 seg.value = "0" + seg.value;
-            } else {
+            } else if(seg.value <= 0) {
                 seg.value = "00";
-                btnIniciar.value = "Iniciar";
             }
+
             if (seg.value <= 0) {
-                if (min.value <= 0) {
-                    return false;
-                } else {
-                    if (min.value < 10 && min.value > 0) {
-                        min.value = "0" + min.value;
-                    }
+                if (min.value > 0 && min.value < 10) {
+                    min.value--;
+                    min.value = "0" + min.value;
                     seg.value = "59";
                 }
+                else if(min.value > 0){
+                    min.value--;
+                    seg.value = 59;
+                }
             }
+            
             if (seg.value <= 0) {
                 clearInterval(id);
             }
         }, 1000);
     }
-
 }

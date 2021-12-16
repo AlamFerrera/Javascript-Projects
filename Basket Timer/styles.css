@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 95%;
     padding: 20px 0;
     border-radius: 10px;
     margin: 0 auto;
@@ -27,12 +27,17 @@
     font-size: 4.5rem;
 }
 
-input{
+input, .valueIzq, .valueDer{
     font-size: 4rem;
     background-color: inherit;
     text-align: center;
     width: 100px;
     border:none;
+}
+
+.valueIzq, .valueDer:focus{
+    outline: none;
+    border: none;
 }
 
 .timer{
@@ -75,12 +80,6 @@ input{
     background-color: rgb(14, 80, 43);
 }
 
-/*
-.buttonIniciar:focus{
-    background-color: rgb(1, 44, 20);
-}*/
-
-
 .buttonReset{
     background-color: rgb(161, 43, 43);
     color: #FFF;
@@ -90,7 +89,27 @@ input{
     background-color: rgb(136, 18, 18);
 }
 
-/*
-.buttonReset:focus{
-    background-color: rgb(66, 2, 2);
-}*/
+.arrow-up, .arrow-down{
+    width: 0; 
+    height: 0; 
+    margin-left: 30%;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    cursor: pointer;
+}
+
+.arrow-up{
+    border-bottom: 15px solid black;
+}
+
+.arrow-up:hover{
+    border-bottom: 15px solid green;
+}
+
+.arrow-down {
+    border-top: 20px solid black;
+}
+
+.arrow-down:hover{
+    border-top: 20px solid red;
+}
