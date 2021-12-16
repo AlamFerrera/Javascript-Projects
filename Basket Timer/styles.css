@@ -1,10 +1,37 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-.container{
+.valueIzq,
+.minSeg,
+.valueDer,
+.end {
+    font-family: "Teko", sans-serif;
+}
+
+.separator {
+    font-size: 4rem;
+}
+
+.end {
+    overflow: hidden;
+    text-align: center;
+
+    -webkit-animation: glow linear 1s infinite;
+    animation: glow linear 1.1s infinite;
+}
+
+@keyframes glow {
+    100% {
+        color: red;
+    }
+}
+
+.container {
     background-color: royalblue;
     min-height: 100vh;
     display: flex;
@@ -12,7 +39,7 @@
     justify-content: center;
 }
 
-.row{
+.row {
     background-color: #FFF;
     display: flex;
     align-items: center;
@@ -23,37 +50,40 @@
     margin: 0 auto;
 }
 
-.labels{
+.labels {
     font-size: 4.5rem;
 }
 
-input, .valueIzq, .valueDer{
+input,
+.valueIzq,
+.valueDer {
     font-size: 4rem;
     background-color: inherit;
     text-align: center;
     width: 100px;
-    border:none;
+    border: none;
 }
 
-.valueIzq, .valueDer:focus{
+.valueIzq,
+.valueDer:focus {
     outline: none;
     border: none;
 }
 
-.timer{
+.timer {
     display: flex;
     padding: 0;
     margin: 0;
     font-size: 4.5rem;
 }
 
-.minSeg{
+.minSeg {
     width: 75px;
     padding: 0;
     margin: 0;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +91,9 @@ input, .valueIzq, .valueDer{
     margin: 3px 0;
     width: 100%;
 }
-.buttonIniciar, .buttonReset{
+
+.buttonIniciar,
+.buttonReset {
     width: 120px;
     margin: 1.5rem;
     padding: 10px;
@@ -71,38 +103,39 @@ input, .valueIzq, .valueDer{
     cursor: pointer;
 }
 
-.buttonIniciar{
+.buttonIniciar {
     background-color: seagreen;
     color: #FFF;
 }
 
-.buttonIniciar:hover{
+.buttonIniciar:hover {
     background-color: rgb(14, 80, 43);
 }
 
-.buttonReset{
+.buttonReset {
     background-color: rgb(161, 43, 43);
     color: #FFF;
 }
 
-.buttonReset:hover{
+.buttonReset:hover {
     background-color: rgb(136, 18, 18);
 }
 
-.arrow-up, .arrow-down{
-    width: 0; 
-    height: 0; 
+.arrow-up,
+.arrow-down {
+    width: 0;
+    height: 0;
     margin-left: 30%;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     cursor: pointer;
 }
 
-.arrow-up{
+.arrow-up {
     border-bottom: 15px solid black;
 }
 
-.arrow-up:hover{
+.arrow-up:hover {
     border-bottom: 15px solid green;
 }
 
@@ -110,6 +143,6 @@ input, .valueIzq, .valueDer{
     border-top: 20px solid black;
 }
 
-.arrow-down:hover{
+.arrow-down:hover {
     border-top: 20px solid red;
 }
