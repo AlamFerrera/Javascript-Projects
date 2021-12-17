@@ -92,7 +92,7 @@ button{
     color: #D27752;
 }
 
-@media screen and (max-width: 7680px){
+@media screen and (max-width: 768px){
     nav button{
         display: none;
     }
