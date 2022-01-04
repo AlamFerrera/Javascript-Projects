@@ -60,17 +60,17 @@ body{
     gap: 1rem;
 }
 
-.icons{
+.header .icons{
     font-size: 2.5rem;
     cursor: pointer;
     color: var(--white);
 }
 
-.icons:hover{
+.header .icons:hover{
     color: var(--yellow);
 }
 
-#menu-btn{
+.header #menu-btn{
     display: none;
 }
 
@@ -153,23 +153,23 @@ section{
     background-position: center;
 }
 
-.content{
+.home .content{
     max-width: 70rem;
     text-align: center;
     margin: 0 auto;
 }
 
-.content img{
+.home .content img{
     width: 100%;
 }
 
-.content h3{
+.home .content h3{
     font-size: 4rem;
     text-transform: uppercase;
     color: var(--white);
 }
 
-.content p{
+.home .content p{
     font-size: 1.7rem;
     line-height:2;
     color: var(--light-color);
@@ -282,8 +282,97 @@ section{
     color: var(--light-color);
 }
 
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
 
+.image{
+    flex: 1 1 40rem;
+}
 
+.image img{
+    width: 100%;
+}
+
+.about .content{
+    flex: 1 1 40rem;
+}
+
+.about .content .title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.about .content p{
+    font-size: 1.5rem;
+    line-height:2;
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+.about .content .icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.about .content .icons h3{
+    flex-wrap: 1 1 16rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.about .content .icons h3 i{
+    padding-right: .5rem;
+    color: var(--yellow);
+}
+
+.reviews .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem,1fr));
+    gap:2rem;
+}
+
+.reviews .box-container .box{
+    text-align: center;
+    padding: 2rem;
+}
+
+.reviews .box-container .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.reviews .box-container .box h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.reviews .box-container .box p{
+    font-size: 1.4rem;
+    line-height:2;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.reviews .box-container .box .stars{
+    padding-top: .5rem;
+}
+
+.reviews .box-container .box .stars i{
+    font-size: 1.7rem;
+    color: var(--yellow);
+}
 
 
 
@@ -306,7 +395,7 @@ section{
         font-size: 55%;
     }
 
-    #menu-btn{
+    .header #menu-btn{
         display: inline-block;
     }
 
