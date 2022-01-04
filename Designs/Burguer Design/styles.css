@@ -198,12 +198,12 @@ section{
     gap:2rem;
 }
 
-.box{
+.service .box{
     text-align: center;
     padding: 2rem;
 }
 
-.box i{
+.service .box i{
     height: 7rem;
     width: 7rem;
     line-height: 7rem;
@@ -214,19 +214,73 @@ section{
     border-radius: 50%;
 }
 
-.box h3{
+.service .box h3{
     padding: 1rem 0;
     font-size: 2rem;
     text-transform: uppercase;
     color: var(--white);
 }
 
-.box p{
+.service .box p{
     font-size: 1.5;
     line-height:2;
     color: var(--light-color);
 }
 
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heading h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem,1fr));
+    gap:2rem;
+}
+
+.box-container .box{
+    text-align: center;
+}
+
+.box-container .box img{
+    height: 25rem;
+}
+
+.box-container .box img:hover{
+    transform: translateY(1rem);
+}
+
+.box-container .box .content{
+    padding: 1rem 0; 
+}
+
+.box-container .box .content .stars{
+    margin-bottom: 2rem;
+}
+
+.box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--yellow);
+}
+
+.box-container .box .content h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.box-container .box .content .price{
+    font-size: 2rem;
+    line-height:2;
+    color: var(--light-color);
+}
 
 
 
