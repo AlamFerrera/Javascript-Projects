@@ -98,7 +98,7 @@ body{
     transform: translateX(-50%);
 }
 
-img{
+.header img{
     width: 15rem;
 }
 
@@ -142,10 +142,73 @@ img{
     transform: rotate(180deg);
 }
 
+section{
+    padding: 3rem 9%;
+}
+
+.home{
+    margin-top: 7rem;
+    background: url(images/home-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    max-width: 70rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content img{
+    width: 100%;
+}
+
+.content h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.content p{
+    font-size: 1.7rem;
+    line-height:2;
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: var(--white);
+    border: var(--border);
+    background: no-repeat;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+}
+
+.btn:hover{
+    color: var(--black);
+    background: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
 /*Media Queries*/
 @media screen and (max-width: 1200px){
     .header{
         padding: 3rem;
+    }
+
+    section{
+        padding: 3rem 2rem;
     }
 }
 
@@ -188,6 +251,12 @@ img{
 
     .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content h3{
+        font-size: 2.5rem;
     }
 }
 
