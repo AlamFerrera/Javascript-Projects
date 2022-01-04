@@ -192,6 +192,41 @@ section{
     background: var(--white);
 }
 
+.service{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem,1fr));
+    gap:2rem;
+}
+
+.box{
+    text-align: center;
+    padding: 2rem;
+}
+
+.box i{
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    background: var(--yellow);
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.box p{
+    font-size: 1.5;
+    line-height:2;
+    color: var(--light-color);
+}
+
 
 
 
