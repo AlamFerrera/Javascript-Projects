@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap");
+
+:root{
+    --yellow : #EACF4F;
+    --white: #FFF;
+    --black: #000;
+    --light-color: #AAA;
+    --border: .2rem solid rgba(255,255,255,.3);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+    border-radius: 5rem;
+}
+
+body{
+    background: url(images/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--black);
+    padding: 3rem 9%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.icons{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.icons:hover{
+    color: var(--yellow);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.navbar a{
+    color: var(--white);
+    font-size: 2rem;
+    margin: 0 2rem;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: var(--yellow);
+}
+
+.space{
+    display: inline-block;
+    width: 16rem;
+}
+
+.logo{
+    position: absolute;
+    top: 3rem;
+    left: 48.5%;
+    transform: translateX(-50%);
+}
+
+img{
+    width: 15rem;
+}
+
+.search-form{
+    height: 7rem;
+    padding: 0 2rem;
+    border-top: var(--border);
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.search-form.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.search-form input{
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.search-form label{
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.search-form label:hover{
+    color: var(--yellow);
+}
+
+.fa-times{
+    transform: rotate(180deg);
+}
+
+/*Media Queries*/
+@media screen and (max-width: 1200px){
+    .header{
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header{
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+
+    .logo{
+        transform: translateX(0);
+        left: 3rem;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .navbar a{
+        display: block;
+        margin: 3rem 2rem;
+    }
+
+    .navbar .space{
+        display: none;
+    }
+
+    .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 450px){
+    .header{
+        padding: 3rem;
+    }
+}
