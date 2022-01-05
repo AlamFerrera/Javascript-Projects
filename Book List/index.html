@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <i class="fas fa-book"></i>
+            <h1> <span>MyBook</span> List</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="titulo" placeholder="Titulo" class="form-control">
+                    <input type="text" id="autor" placeholder="Autor" class="form-control">
+                    <input type="text" id="isbn" placeholder="ISBN" class="form-control">
+                    <input type="button" id="btnGuardar" value="Guardar libro" class="btn">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>ISBN</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="bookContent">
+                            <td>Titanic</td>
+                            <td>Yo</td>
+                            <td>1232143</td>
+                            <td>
+                                <i class="fas fa-times"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
