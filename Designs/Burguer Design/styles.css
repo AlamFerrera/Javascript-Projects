@@ -519,6 +519,26 @@ section{
     padding: 1.5rem 0;
 }
 
+.footer{
+    text-align: center;
+    background: linear-gradient(transparent, var(--black));
+}
+
+.footer .links a {
+    margin: 1rem;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    line-height:2;
+    color: var(--light-color);
+    padding-top: 2rem;
+}
+
+.footer .credit span{
+    color: var(--yellow);
+}
+
 
 
 
