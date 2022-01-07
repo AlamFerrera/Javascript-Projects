@@ -23,7 +23,7 @@
                 <div class="col">
                     <input type="text" id="titulo" placeholder="Titulo" class="form-control">
                     <input type="text" id="autor" placeholder="Autor" class="form-control">
-                    <input type="text" id="isbn" placeholder="ISBN" class="form-control">
+                    <input type="text" id="isbn" placeholder="ISBN" class="form-control" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="5">
                     <input type="button" id="btnGuardar" value="Guardar libro" class="btn">
                 </div>
             </div>
